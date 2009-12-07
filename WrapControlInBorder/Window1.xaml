@@ -1,0 +1,25 @@
+﻿<Window x:Class="WrapControlInBorder.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:WrapControlInBorder="clr-namespace:WrapControlInBorder"
+    Title="Window1" Height="300" Width="300">
+    
+    <Window.Resources>
+        
+        
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+        <Button WrapControlInBorder:WrapInBorderBehavior.Wrap="True" 
+                Content="Test" />
+        
+        <ContentControl Grid.Row="1">
+            <TextBox WrapControlInBorder:WrapInBorderBehavior.Wrap="True" 
+                     Text="I am a text box" />
+        </ContentControl>
+    </Grid>
+</Window>
